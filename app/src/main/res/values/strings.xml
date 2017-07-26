@@ -1,0 +1,20 @@
+<resources>
+	<string name="app_name">MassageWala</string>
+	<string name="title_home">Home</string>
+	<string name="title_dashboard">Dashboard</string>
+	<string name="title_notifications">Notifications</string>
+	<string name="forgot_password">Forgot password</string>
+	<string name="email_id_mobile_number">Username</string>
+	<string name="login">Login</string>
+	<string name="password">Password</string>
+	<string name="sign_up">Sign up</string>
+	<string name="username">Username</string>
+	<string name="mobile_number">Mobile Number</string>
+	<string name="email">Email</string>
+	<string name="create_account">Create Account</string>
+	<string name="already_have_an_account_login">Already have an account ? Login</string>
+	<string name="sing_in">Sing In</string>
+	<string name="register">Register</string>
+	<string name="network_problem">Network Problem</string>
+	<string name="loading">please wait...</string>
+</resources>
