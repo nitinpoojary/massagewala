@@ -16,6 +16,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.example.nitin.massagewala.Adapter.HomeContentAdapter;
 import com.example.nitin.massagewala.Model.HomeContent;
 import com.example.nitin.massagewala.R;
 import com.example.nitin.massagewala.lib.Config;
@@ -36,6 +37,7 @@ public class HomeFragment extends Fragment {
 	RecyclerView.LayoutManager layoutManager;
 	ArrayList<HomeContent> arrayList;
 	RequestQueue requestQueue;
+	public static HomeContent homeContent=new HomeContent();
 
 	@Nullable
 	@Override
@@ -79,7 +81,7 @@ public class HomeFragment extends Fragment {
 
 	private void CallMassageList() {
 
-		JsonObjectRequest objectRequest = new JsonObjectRequest(Config.JSON_URL, new Response.Listener<JSONObject>() {
+		/*JsonObjectRequest objectRequest = new JsonObjectRequest(Config.JSON_URL, new Response.Listener<JSONObject>() {
 			@Override
 			public void onResponse(JSONObject response) {
 
@@ -90,7 +92,14 @@ public class HomeFragment extends Fragment {
 
 			}
 		});
-		requestQueue.add(objectRequest);
+		requestQueue.add(objectRequest);*/
+		homeContent.setTitle("Head Massage");
+		homeContent.setDescription("sfjsfd jsfsdklfjdsj ssddfjsfkldf");
+		homeContent.setPrice("350");
+		arrayList.add(homeContent);
+
+		HomeContentAdapter adapter=new HomeContentAdapter(getActivity(),arrayList);
+
 	}
 }
 

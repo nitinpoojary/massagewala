@@ -13,7 +13,7 @@ import com.example.nitin.massagewala.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     loadFragment(new HomeFragment());
                     return true;
-                /*case R.id.navigation_dashboard:
+                case R.id.navigation_tracking:
 
-                    return true;*/
+                    return true;
                 case R.id.navigation_notifications:
 
                     return true;
