@@ -98,8 +98,21 @@ public class HomeFragment extends Fragment {
 		homeContent.setPrice("350");
 		arrayList.add(homeContent);
 
+		homeContent.setTitle("Body Massage");
+		homeContent.setDescription("sfjsfd jsfsdklfjdsj ssddfjsfkldf");
+		homeContent.setPrice("350");
+		arrayList.add(homeContent);
+
+		homeContent.setTitle("Leg Massage");
+		homeContent.setDescription("sfjsfd jsfsdklfjdsj ssddfjsfkldf");
+		homeContent.setPrice("350");
+		arrayList.add(homeContent);
+
+
+
 		HomeContentAdapter adapter=new HomeContentAdapter(getActivity(),arrayList);
 
+		recyclerView.setAdapter(adapter);
 	}
 }
 
