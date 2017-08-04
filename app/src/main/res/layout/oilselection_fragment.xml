@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="16dp"
+			android:text="Oil Selection"
+			android:textAlignment="center"
+			android:textSize="25sp"
+			android:textStyle="bold" />
+
+		<TextView
+			android:id="@+id/textView3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="16dp"
+			android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp"
+			android:text="When it comes to automobiles, people have sharply different motives and objectives"
+			android:textAlignment="center" />
+
+		<android.support.v7.widget.RecyclerView
+			android:id="@+id/rvOils"
+			android:layout_width="match_parent"
+			android:layout_height="300dp" />
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/btnViewCart"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:layout_marginBottom="27dp"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:textColor="@color/white"
+		android:text="Button"
+		android:background="@drawable/gradianbasecolor"/>
+</RelativeLayout>
