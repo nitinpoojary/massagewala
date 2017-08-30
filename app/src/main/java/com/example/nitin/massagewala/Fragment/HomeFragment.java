@@ -16,6 +16,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.example.nitin.massagewala.Activity.MainActivity;
 import com.example.nitin.massagewala.Adapter.HomeContentAdapter;
 import com.example.nitin.massagewala.Model.HomeContent;
 import com.example.nitin.massagewala.R;
@@ -31,14 +32,14 @@ import java.util.HashMap;
  * Created by NITIN on 7/13/2017.
  */
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements HomeContentAdapter.openOils {
 	private SliderLayout mDemoSlider;
 	RecyclerView recyclerView;
 	RecyclerView.LayoutManager layoutManager;
 	ArrayList<HomeContent> arrayList;
 	RequestQueue requestQueue;
 	public static HomeContent homeContent=new HomeContent();
-
+	MainActivity mainActivity;
 	@Nullable
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class HomeFragment extends Fragment {
 
 	private void init(View view) {
 		mDemoSlider = (SliderLayout) view.findViewById(R.id.slider);
-
+		mainActivity= (MainActivity) getActivity();
 		HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
 		file_maps.put("Hannibal", R.drawable.one);
 		file_maps.put("Big Bang Theory", R.drawable.two);
@@ -110,9 +111,14 @@ public class HomeFragment extends Fragment {
 
 
 
-		HomeContentAdapter adapter=new HomeContentAdapter(getActivity(),arrayList);
+		HomeContentAdapter adapter=new HomeContentAdapter(getActivity(),arrayList,this);
 
 		recyclerView.setAdapter(adapter);
+	}
+
+	@Override
+	public void oilsCallBack() {
+		mainActivity.loadFragment(new OilSelectionFragment());
 	}
 }
 

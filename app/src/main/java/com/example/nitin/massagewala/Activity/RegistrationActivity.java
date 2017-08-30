@@ -6,6 +6,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -38,10 +40,13 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
 	String URL = Config.JSON_URL + "register";
 	private final String TAG = "tag Registration";
 	MyDialog myDialog;
-
+	public static Typeface typeface;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_registration);
 
 		init();
@@ -49,7 +54,8 @@ public class RegistrationActivity extends Activity implements View.OnClickListen
 
 	private void init() {
 
-		Typeface typeface=Typeface.createFromAsset(getAssets(),"fonts/Segoe UI Light.ttf");
+
+		typeface = Typeface.createFromAsset(getAssets(),"fonts/Segoe UI Light.ttf");
 
 		requestQueue = VolleySingleton.getsInstance().getmRequestQueue();
 		myDialog = new MyDialog(this);

@@ -6,9 +6,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.nitin.massagewala.Activity.MainActivity;
 import com.example.nitin.massagewala.Model.OilSelection;
 import com.example.nitin.massagewala.R;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -20,9 +24,11 @@ public class OileSelectionAdapter extends RecyclerView.Adapter<OileSelectionAdap
 	Context context;
 	ArrayList<OilSelection> selectionArrayList;
 
+
 	public OileSelectionAdapter(Activity activity, ArrayList<OilSelection> oilSelection) {
 		this.context=activity;
 		this.selectionArrayList=oilSelection;
+
 	}
 
 	@Override
@@ -34,7 +40,9 @@ public class OileSelectionAdapter extends RecyclerView.Adapter<OileSelectionAdap
 
 	@Override
 	public void onBindViewHolder(ViewHolder holder, int position) {
-
+		OilSelection oilSelection=selectionArrayList.get(position);
+		holder.tvTitle.setText(oilSelection.getTitle());
+		holder.tvDescription.setText(oilSelection.getDescription());
 	}
 
 	@Override
@@ -43,8 +51,15 @@ public class OileSelectionAdapter extends RecyclerView.Adapter<OileSelectionAdap
 	}
 
 	public class ViewHolder extends RecyclerView.ViewHolder{
+		TextView tvTitle,tvDescription;
+
 		public ViewHolder(View itemView) {
 			super(itemView);
+
+			tvTitle=(TextView)itemView.findViewById(R.id.tvOilTitle);
+			tvDescription=(TextView)itemView.findViewById(R.id.tvOilDiscription);
+
+
 		}
 	}
 }

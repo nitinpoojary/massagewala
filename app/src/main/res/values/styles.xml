@@ -11,10 +11,8 @@
 		<item name="actionBarStyle">@style/MyActionBar</item>
     </style>
 
-    <style name="NoTheame" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
-        <!--<item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>-->
+    <style name="NoTheame" parent="Theme.AppCompat.NoActionBar">
+
     </style>
 
 	<style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">

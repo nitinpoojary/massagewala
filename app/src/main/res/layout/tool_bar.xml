@@ -1,0 +1,16 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/toolbar_top"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/gradianbasecolor">
+
+	<TextView
+		android:id="@+id/tv_toolbarHead"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Massage Wall"
+		android:textAlignment="center"
+		android:textColor="@color/white"
+		android:textSize="16sp" />
+
+</android.support.v7.widget.Toolbar>

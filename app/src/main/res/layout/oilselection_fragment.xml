@@ -5,6 +5,7 @@
 	android:orientation="vertical">
 
 	<LinearLayout
+		android:id="@+id/llChild"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="vertical">
@@ -32,20 +33,16 @@
 		<android.support.v7.widget.RecyclerView
 			android:id="@+id/rvOils"
 			android:layout_width="match_parent"
-			android:layout_height="300dp" />
+			android:layout_height="wrap_content"
+			android:scrollbars="horizontal"/>
 
 	</LinearLayout>
 
 	<Button
 		android:id="@+id/btnViewCart"
+		android:layout_below="@+id/llChild"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		android:layout_alignParentLeft="true"
-		android:layout_alignParentStart="true"
-		android:layout_marginBottom="27dp"
-		android:layout_marginLeft="20dp"
-		android:layout_marginRight="20dp"
 		android:textColor="@color/white"
 		android:text="Button"
 		android:background="@drawable/gradianbasecolor"/>

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import com.example.nitin.massagewala.Activity.MainActivity;
 import com.example.nitin.massagewala.Adapter.OileSelectionAdapter;
 import com.example.nitin.massagewala.Model.OilSelection;
 import com.example.nitin.massagewala.R;
@@ -26,17 +27,17 @@ public class OilSelectionFragment extends Fragment {
 	RecyclerView recyclerView;
 	RecyclerView.LayoutManager layoutManager;
 	ArrayList<OilSelection> selectionArrayList;
-
+	MainActivity mainActivity;
 
 	@Nullable
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.oilselection_fragment, container);
+		View view = inflater.inflate(R.layout.oilselection_fragment, container,false);
 		recyclerView = (RecyclerView) view.findViewById(R.id.rvOils);
-		layoutManager = new GridLayoutManager(getActivity(), 2, GridLayoutManager.DEFAULT_SPAN_COUNT, false);
+		layoutManager = new GridLayoutManager(getActivity(),2);
 		recyclerView.setLayoutManager(layoutManager);
 		selectionArrayList = new ArrayList<>();
-
+		mainActivity= (MainActivity) getActivity();
 		callOils();
 		return view;
 	}
@@ -64,6 +65,7 @@ public class OilSelectionFragment extends Fragment {
 		selectionArrayList.add(oilSelection);
 
 		OileSelectionAdapter adapter=new OileSelectionAdapter(getActivity(),selectionArrayList);
+		recyclerView.setAdapter(adapter);
 
 	}
 }
