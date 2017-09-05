@@ -8,11 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.nitin.massagewala.Activity.MainActivity;
-import com.example.nitin.massagewala.Model.OilSelection;
+import com.example.nitin.massagewala.Model.Oil;
 import com.example.nitin.massagewala.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -22,12 +19,12 @@ import java.util.ArrayList;
 
 public class OileSelectionAdapter extends RecyclerView.Adapter<OileSelectionAdapter.ViewHolder> {
 	Context context;
-	ArrayList<OilSelection> selectionArrayList;
+	ArrayList<Oil> selectionArrayList;
 
 
-	public OileSelectionAdapter(Activity activity, ArrayList<OilSelection> oilSelection) {
+	public OileSelectionAdapter(Activity activity, ArrayList<Oil> oil) {
 		this.context=activity;
-		this.selectionArrayList=oilSelection;
+		this.selectionArrayList= oil;
 
 	}
 
@@ -40,9 +37,9 @@ public class OileSelectionAdapter extends RecyclerView.Adapter<OileSelectionAdap
 
 	@Override
 	public void onBindViewHolder(ViewHolder holder, int position) {
-		OilSelection oilSelection=selectionArrayList.get(position);
-		holder.tvTitle.setText(oilSelection.getTitle());
-		holder.tvDescription.setText(oilSelection.getDescription());
+		Oil oil =selectionArrayList.get(position);
+		holder.tvTitle.setText(oil.getTitle());
+		holder.tvDescription.setText(oil.getDescription());
 	}
 
 	@Override

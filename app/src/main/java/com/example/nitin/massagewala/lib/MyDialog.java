@@ -38,7 +38,7 @@ public class MyDialog {
 
     public void hideProgress(){
         if(progressDialog.isShowing())
-            progressDialog.hide();
+            progressDialog.cancel();
     }
     public void showAlertDialog(String title, String message){
         alertDialog=new AlertDialog.Builder(context);

@@ -1,15 +1,12 @@
 package com.example.nitin.massagewala.lib;
 
 
-/**
- * Created by astiw on 09-11-2015.
- */
 public class Config {
 
-	public static final String tag = "mytag";
+	public static final String TAG = "mytag";
 	public static final String JSON_URL = "http://www.vbktraders.com/massagewala/api/user/";
 	public static final String SP_FILE_NAME = "astiwz_quiz_app";
-
+	public static final String SLIDER_IMAGE = "http://www.vbktraders.com/massagewala/uploads/slider_image/";
 
 
         /*public static final HomeMenu[] HOME_MENUS = {

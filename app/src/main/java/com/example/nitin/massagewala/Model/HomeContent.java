@@ -1,15 +1,41 @@
 package com.example.nitin.massagewala.Model;
 
-/**
- * Created by NITIN on 7/23/2017.
- */
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class HomeContent {
-	public String image;
-	public String title;
-	public String description;
-	public String price;
+	private String image;
+	private String title;
+	private String description;
+	private String price;
+	private List<Oil> oilList = new ArrayList<>();
 
+    public HomeContent(JSONObject jsonObject) {
+		try {
+			this.image = jsonObject.getString("massage_pic");
+			this.title = jsonObject.getString("massage_name");
+			this.description = jsonObject.getString("massage_info");
+			this.price = jsonObject.getString("massage_price");
+			ArrayList<Oil> oils = new ArrayList<>();
+			/*JSONArray jsonArray = jsonObject.getJSONArray("oil_list");
+			for (int i = 0; i <jsonArray.length() ; i++) {
+				Oil oil = new Oil(jsonArray.getJSONObject(i));
+				oils.add(oil);
+			}
+			this.oilList=oils;*/
+
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+
+	}
+	public HomeContent() {
+	}
 	public String getImage() {
 		return image;
 	}

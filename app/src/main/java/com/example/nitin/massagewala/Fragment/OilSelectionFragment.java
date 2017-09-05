@@ -9,11 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import com.example.nitin.massagewala.Activity.MainActivity;
 import com.example.nitin.massagewala.Adapter.OileSelectionAdapter;
-import com.example.nitin.massagewala.Model.OilSelection;
+import com.example.nitin.massagewala.Model.Oil;
 import com.example.nitin.massagewala.R;
 
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ public class OilSelectionFragment extends Fragment {
 	Button btnViewCart;
 	RecyclerView recyclerView;
 	RecyclerView.LayoutManager layoutManager;
-	ArrayList<OilSelection> selectionArrayList;
+	ArrayList<Oil> selectionArrayList;
 	MainActivity mainActivity;
 
 	@Nullable
@@ -43,26 +42,26 @@ public class OilSelectionFragment extends Fragment {
 	}
 
 	private void callOils() {
-		OilSelection oilSelection = new OilSelection();
-		oilSelection.setId(1);
-		oilSelection.setTitle("Nitin");
-		oilSelection.setDescription("dahdjkhsahdadasd");
-		selectionArrayList.add(oilSelection);
+		Oil oil = new Oil();
+		oil.setId(1);
+		oil.setTitle("Nitin");
+		oil.setDescription("dahdjkhsahdadasd");
+		selectionArrayList.add(oil);
 
-		oilSelection.setId(2);
-		oilSelection.setTitle("Nitin");
-		oilSelection.setDescription("dahdjkhsahdadasd");
-		selectionArrayList.add(oilSelection);
+		oil.setId(2);
+		oil.setTitle("Nitin");
+		oil.setDescription("dahdjkhsahdadasd");
+		selectionArrayList.add(oil);
 
-		oilSelection.setId(3);
-		oilSelection.setTitle("Nitin");
-		oilSelection.setDescription("dahdjkhsahdadasd");
-		selectionArrayList.add(oilSelection);
+		oil.setId(3);
+		oil.setTitle("Nitin");
+		oil.setDescription("dahdjkhsahdadasd");
+		selectionArrayList.add(oil);
 
-		oilSelection.setId(4);
-		oilSelection.setTitle("Nitin");
-		oilSelection.setDescription("dahdjkhsahdadasd");
-		selectionArrayList.add(oilSelection);
+		oil.setId(4);
+		oil.setTitle("Nitin");
+		oil.setDescription("dahdjkhsahdadasd");
+		selectionArrayList.add(oil);
 
 		OileSelectionAdapter adapter=new OileSelectionAdapter(getActivity(),selectionArrayList);
 		recyclerView.setAdapter(adapter);
